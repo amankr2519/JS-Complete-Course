@@ -7,7 +7,7 @@ setInterval(() => {
   
   const time = new Date();
   
-  element.textContent = time ;
+  // element.textContent = time ;
   
   const option = {
     timeZone : 'Asia/Kolkata',
