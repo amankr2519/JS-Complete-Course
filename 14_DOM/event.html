@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Event</title>
+  <style>
+    body {
+        background-color: black;
+        color: white;
+    }
+
+    div {
+        background-color: blue;
+        height: 100px;
+        width: 100px;
+        margin: 100px;
+    }
+</style>
+</head>
+<body>
+  <h1>We are learning event right now </h1>
+  <button id="btn1">change to crimson </button>
+  <button id="btn2">change to light</button>
+
+  <div onmouseover="bgChange1()" onmouseleave="bgChange2()">
+    div
+  </div>
+
+  <script>
+    let bt1 = document.querySelector("#btn1")
+    let bt2 = document.querySelector("#btn2")
+
+    bt1.addEventListener('click',(event)=>{
+      document.body.style.backgroundColor = "crimson"
+      document.body.style.color = "white"
+      console.log(event.type)
+      console.log(event.target)
+
+    })
+
+    bt2.addEventListener('mouseover',()=>{
+      document.body.style.backgroundColor = "white"
+      document.body.style.color = "black"
+      console.log(event.type)
+      console.log(event.target)
+    })
+
+
+    let bgChange1 = ()=>{
+      const div = document.querySelector("div")
+      div.style.backgroundColor = "magenta"
+      
+    }
+
+    let bgChange2 = ()=>{
+      const div = document.querySelector("div")
+      div.style.backgroundColor = "red";
+    }
+
+  </script>
+  
+</body>
+</html>

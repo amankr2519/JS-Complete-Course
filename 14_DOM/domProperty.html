@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOM Property</title>
+  <style>
+    body{
+      background-color: darkslategray;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+
+  <h1 class="heading">Suman, Web dev mastery
+      <span>WDM</span>
+      <span>Suman - 100</span>
+
+  </h1>
+
+  <script>
+    let element = document.querySelector('h1')
+    console.log(element);
+    console.log("text content = ",element.textContent)
+    console.log("inner Html = ",element.innerHTML)
+    console.log("inner text = ",element.innerText)
+    // console.log("style = ",element.style)
+    console.log("class name = ",element.className)
+
+    element.style.color = "pink"
+    element.textContent = "Aman";
+
+    console.log("class name before - ",element.className)
+
+    element.className = "web";
+    console.log("class name before - ",element.className)
+
+
+  </script>
+</body>
+</html>
